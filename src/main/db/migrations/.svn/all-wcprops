@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/19/GradeCalculator/src/main/db/migrations
+END
+20121220043409_create_category_table.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/19/GradeCalculator/src/main/db/migrations/20121220043409_create_category_table.sql
+END
