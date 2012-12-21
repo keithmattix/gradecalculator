@@ -8,5 +8,9 @@ public class Category extends Model {
 	@SuppressWarnings("unused")
 	private double weight;
 	
+	 static{
+	        validatePresenceOf("name", "weight");
+	    }    
+	
 
 }

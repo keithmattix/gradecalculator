@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+  <dict>
+    <key>CFBundleName</key>
+    <string>Grade Calculator</string>
+    <key>CFBundleVersion</key>
+    <string>0.0.1-SNAPSHOT</string>
+    <key>CFBundleAllowMixedLocalizations</key>
+    <string>true</string>
+    <key>CFBundleExecutable</key>
+    <string>JavaApplicationStub</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIconFile</key>
+    <string>School.icns</string>
+    <key>Java</key>
+    <dict>
+      <key>MainClass</key>
+      <string>based.category.GradeCalculator</string>
+      <key>JVMVersion</key>
+      <string>1.7+</string>
+      <key>ClassPath</key>
+      <array><string>$JAVAROOT/GradeCalculator-0.0.1-SNAPSHOT.jar</string><string>$JAVAROOT/activejdbc-1.4.5.jar</string><string>$JAVAROOT/slf4j-api-1.6.4.jar</string><string>$JAVAROOT/javalite-common-1.4.5.jar</string><string>$JAVAROOT/junit-4.8.2.jar</string><string>$JAVAROOT/mysql-connector-java-5.1.6.jar</string><string>$JAVAROOT/javassist-3.12.1.GA.jar</string></array>
+    </dict>
+  </dict>
+</plist>

@@ -78,7 +78,9 @@ public class NewCategoryDialog extends JDialog {
 				JButton okButton = new JButton("OK");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/gradecalculator", "root", "mysql");
+						if(!Base.hasConnection()) {
+							Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/gradecalculator", "root", "mysql");
+						}
 						try {
 							double totalWeight = 0.0;
 							LazyList<Category> allCategories = Category.findAll();
@@ -87,7 +89,7 @@ public class NewCategoryDialog extends JDialog {
 							}
 							if(totalWeight + Double.parseDouble(newCategoryWeightTextField.getText()) / 100 <= 1.0) {
 								category = Category.createIt("name", newCategoryNameTextField.getText(), "weight", Double.parseDouble(newCategoryWeightTextField.getText()) / 100);
-								GradeCalculator2 owner = (GradeCalculator2)NewCategoryDialog.this.getOwner();
+								GradeCalculator owner = (GradeCalculator)NewCategoryDialog.this.getOwner();
 								owner.addCategoryFields(category);
 								NewCategoryDialog.this.dispose();
 								Base.close();
