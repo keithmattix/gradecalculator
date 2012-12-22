@@ -14,7 +14,7 @@ public class BackgroundImagePanel extends JPanel {
 	public BackgroundImagePanel() {
 		backgroundImage = new ImageIcon("School.jpg").getImage();
 	}
-	
+
 	public BackgroundImagePanel(String imageFileName) {
 		backgroundImage = new ImageIcon(imageFileName).getImage();
 	}
@@ -25,15 +25,16 @@ public class BackgroundImagePanel extends JPanel {
 		setPreferredSize(size);
 		setMinimumSize(size);
 		setSize(size);
-		int width = getWidth();  
-        int height = getHeight();  
-        int imageW = backgroundImage.getWidth(this);  
-        int imageH = backgroundImage.getHeight(this);  
-   
-        // Tile the image to fill our area.  
-        for (int x = 0; x < width; x += imageW) {  
-            for (int y = 0; y < height; y += imageH) {  
-                g.drawImage(backgroundImage, x, y, this);  
-            }  
-        }  	}
+		int width = getWidth();
+		int height = getHeight();
+		int imageW = backgroundImage.getWidth(this);
+		int imageH = backgroundImage.getHeight(this);
+
+		// Tile the image to fill our area.
+		for (int x = 0; x < width; x += imageW) {
+			for (int y = 0; y < height; y += imageH) {
+				g.drawImage(backgroundImage, x, y, this);
+			}
+		}
+	}
 }

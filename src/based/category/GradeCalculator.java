@@ -9,6 +9,9 @@ import java.awt.image.BufferedImage;
 import java.awt.print.PrinterException;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.MessageFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -19,24 +22,28 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import javax.swing.filechooser.FileFilter;
 
+import org.apache.commons.io.FileUtils;
 import org.javalite.activejdbc.Base;
 import org.javalite.activejdbc.LazyList;
 
 import panel.images.BackgroundImagePanel;
 
+import com.sun.jimi.core.Jimi;
+
 public class GradeCalculator extends JFrame {
 	private static final long serialVersionUID = 1187869233288937276L;
-	private JPanel panel, averagePanel;
+	private BackgroundImagePanel panel, averagePanel;
 	static GradeCalculator window;
 	private BufferedImage background;
 	private ConcurrentHashMap<Long, HashMap<JLabel, JTextField>> fields;
